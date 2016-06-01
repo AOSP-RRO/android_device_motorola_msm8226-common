@@ -8,12 +8,13 @@
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache       ext4    rw,nosuid,nodev,noatime,nodiratime,barrier=1,data=ordered                      wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/fsg          /fsg         ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:firmware_file:s0                  wait
 /dev/block/platform/msm_sdcc.1/by-name/modem        /firmware    ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:firmware_file:s0                  wait
-/dev/block/platform/msm_sdcc.1/by-name/persist      /persist     ext4    ro,nosuid,nodev,barrier=1                                                      wait
+/dev/block/platform/msm_sdcc.1/by-name/persist      /persist     ext4    rw,nosuid,nodev,barrier=1                                                      wait
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot        emmc    defaults                                                                       recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery    emmc    defaults                                                                       recoveryonly
 
 # SDCard
 /devices/msm_sdcc.2/mmc_host*                       auto         auto    defaults                                                                       voldmanaged=sdcard1:auto,encryptable=userdata
+# USB OTG
 /devices/platform/msm_hsusb_host/usb*               auto         auto    defaults                                                                       voldmanaged=usb:auto
 
 # ZRAM
